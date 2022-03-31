@@ -1,0 +1,22 @@
+.nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  border: none;
+  z-index: 1;
+  border-radius: unset;
+}
+.nav-header{
+ vertical-align: unset;
+letter-spacing: 4px;
+}
+.list-item {
+  border: none;
+}
+.list-item:hover {
+  background-color: unset;
+}
+#main-list>.list-item > a:hover {
+  font-size: 1rem;
+  font-weight:bold;
+}
