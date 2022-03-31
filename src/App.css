@@ -1,3 +1,73 @@
-.App{
-    height: 100vh;
+@import url("./Utils/utilities.css");
+:root {
+  --bg-color:#2b2b31;
+  --theme-color: #ff523b;
+  --theme-shade-2: #563434;
+  --theme-shade-3: rgb(160, 69, 27);
+  --txt-gray: hsla(0,0%,100%,0.75);
+  --txt-white: #fff;
+  --border-shade: lightpink;
+}
+
+.App {
+  height: 100vh;
+}
+body{
+ background-color: var(--bg-color) ;
+ color:var(--txt-white);
+}
+/* for heading with highlighted underline */
+.title {
+  margin: 5rem;
+  position: relative;
+  line-height: 3.3rem;
+}
+.title::after {
+  content: "";
+  background: var(--theme-color);
+  width: 7rem;
+  height: 6px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* overriding style from component library */
+
+.card {
+  padding: 0;
+  box-shadow: 0 0 0.8rem var(--txt-white);
+  background-color: unset;
+  border: none;
+}
+
+.footer {
+  background-color: rgb(42,42,42);
+}
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  border: none;
+}
+.btn-dismiss {
+  border: none;
+  top: -10px;
+  right: -9px;
+}
+.main-container {
+  min-height: 80vh;
+}
+
+/* body scrollbar */
+body::-webkit-scrollbar-thumb {
+  background-color: var(--theme-color);
+  border-radius: 12px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-shade-3);
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
 }
