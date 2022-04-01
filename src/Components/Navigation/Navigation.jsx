@@ -19,7 +19,9 @@ export function Navbar() {
           <NavLink to="/" className="link">
             <span className="nav-header  heading-1 txt-white l-sp-3">
               FIT
-              <span className="txt-white bg-theme heading-2 txt-bold">TV</span>{" "}
+              <span className="txt-white bg-theme heading-2 txt-bold">
+                TV
+              </span>{" "}
             </span>
           </NavLink>
         </div>
@@ -35,7 +37,7 @@ export function Navbar() {
             </NavLink>
           </li>
           <li className="list-item">
-            <NavLink to="/explore" className="link txt-white">
+            <NavLink to="/videos/explore" className="link txt-white">
               EXPLORE
             </NavLink>
           </li>
