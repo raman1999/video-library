@@ -1,0 +1,28 @@
+.sec-introduction {
+  box-shadow: 0 4px 4px -5px var(--txt-white);
+}
+.home-image{
+  min-width: 50%;
+filter:drop-shadow(4px 4px 4px var(--theme-color));
+}
+.intro-container{
+  width:50%;
+}
+.intro-container > a:hover {
+  font-size: 1rem;
+}
+.sec-introduction .btn {
+  width: 10rem;
+}
+.featured-category {
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 10rem;
+  margin-top: 2rem;
+}
+.featured-category .link {
+  transition: ease-in 0.25s;
+}
+.featured-category .link:hover {
+  transform: scale(1.05);
+}
