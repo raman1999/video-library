@@ -1,0 +1,4 @@
+.video-grid-container{
+    display: grid; 
+  grid-template-columns: 18vw 1fr;
+}
