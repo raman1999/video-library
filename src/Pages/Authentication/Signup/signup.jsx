@@ -96,7 +96,7 @@ export function Signup() {
   return (
     <section className="section-register txt-center flex-box j-center">
       <form className=" form-container flex-column" onSubmit={signupHandler}>
-        <h3 className="title txt-gray">Register</h3>
+        <h3 className="title txt-gray l-sp-2">Register</h3>
         <div className="input-container">
           <div className="input-box">
             <label className="label">

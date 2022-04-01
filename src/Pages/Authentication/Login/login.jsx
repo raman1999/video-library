@@ -47,7 +47,7 @@ export function Login() {
         className="form-container flex-column"
         onSubmit={loginSubmitHandler}
       >
-        <h3 className="title txt-gray">Login</h3>
+        <h3 className="title txt-gray l-sp-2">Login</h3>
 
         <div className="input-container">
           <div className="input-box">
