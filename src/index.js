@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import { makeServer } from "./server";
-import { AuthenticationProvider } from "./Context";
+import { AuthenticationProvider, FilterProvider } from "./Context";
 // Call make Server
 makeServer();
 
@@ -11,7 +11,9 @@ ReactDOM.render(
   <Router>
     <React.StrictMode>
       <AuthenticationProvider>
-        <App />
+        <FilterProvider>
+          <App />
+        </FilterProvider>
       </AuthenticationProvider>
     </React.StrictMode>
   </Router>,
