@@ -15,12 +15,11 @@ export function Home() {
 
   return (
     <>
-      {isLoading && (
+      {isLoading ? (
         <div className="loader">
           <LoadingSpinner />
         </div>
-      )}
-      {!isLoading && (
+      ) : (
         <div class="my">
           <section className="sec-introduction txt-center flex-column">
             <div className="intro-container">
