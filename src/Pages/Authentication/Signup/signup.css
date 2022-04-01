@@ -1,0 +1,56 @@
+.section-register {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.section-register .input-container{
+  margin-top: 1.5rem;
+}
+/* form container */
+.form-container {
+  height: unset;
+}
+.label {
+  display: inline-block;
+  color:var(--txt-gray);
+  width: 10rem;
+  padding-top: 5px;
+  
+}
+.submit-container {
+  margin-top: 2rem;
+  padding-left: 10rem;
+}
+.submit-container > p {
+  margin-top: 1rem;
+}
+.btn-register {
+  width: 100%;
+  margin: auto;
+}
+
+.input-container .input-box {
+  display: flex;
+  justify-content: space-between;
+}
+.input-box > span {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+}
+.input-password-field {
+  position: relative;
+}
+.input-password-field input {
+  padding-right: 0.5rem;
+}
+.eye-icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.7rem;
+  font-size: 1.2rem;
+  color:gray;
+}
+.error-text{
+  padding-top: 4px;
+  color:rgb(235, 107, 107);
+}
