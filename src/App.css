@@ -16,6 +16,24 @@ body{
  background-color: var(--bg-color) ;
  color:var(--txt-white);
 }
+.main-container {
+  min-height: 80vh;
+}
+.videos-list {
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  margin-bottom: 5rem;
+}
+.video-card {
+  box-shadow: 0 0 0.4rem var(--txt-gray);
+  align-items: start;
+  gap:5px;
+}
+.link-no-style {
+  text-decoration: none;
+  color: unset;
+}
+
 /* for heading with highlighted underline */
 .title {
   margin: 5rem;
@@ -35,7 +53,6 @@ body{
 }
 
 /* overriding style from component library */
-
 .card {
   padding: 0;
   box-shadow: 0 0 0.8rem var(--txt-white);
@@ -50,14 +67,6 @@ body{
   display: inline-block;
   margin-top: 1.5rem;
   border: none;
-}
-.btn-dismiss {
-  border: none;
-  top: -10px;
-  right: -9px;
-}
-.main-container {
-  min-height: 80vh;
 }
 
 /* body scrollbar */
