@@ -1,1 +1,1 @@
-
+export { getFilterVideos } from "./getFilterVideos";
