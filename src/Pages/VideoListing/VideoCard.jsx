@@ -1,6 +1,6 @@
-import { useUserContext } from "../../Context";
+import { useUserContext, useAuthenticationContext } from "../../Context";
 import { updateLikedVideos, updateWatchLater } from "../../Utils";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function VideoCard({ video }) {
   const { title, creator, _id, category } = video;
@@ -10,9 +10,11 @@ export function VideoCard({ video }) {
     userState: { likedVideos, watchLater },
     userDispatch,
   } = useUserContext();
-
+  const { login } = useAuthenticationContext();
+  const navigate = useNavigate();
   const isVideoInLikeList = likedVideos.some((vid) => vid._id === video._id);
   const isVideoInWatchLater = watchLater.some((vid) => vid._id === video._id);
+
   return (
     <div className="card video-card txt-left">
       <Link to={`/videos/${_id}`} className="link-no-style">
@@ -27,9 +29,11 @@ export function VideoCard({ video }) {
         <i
           className={`fas fa-thumbs-up ${isVideoInLikeList && "selected-icon"}`}
           onClick={() =>
-            !isVideoInLikeList
-              ? updateLikedVideos("ADD_TO_LIKELIST", video, userDispatch)
-              : updateLikedVideos("REMOVE_FROM_LIKELIST", video, userDispatch)
+            login
+              ? !isVideoInLikeList
+                ? updateLikedVideos("ADD_TO_LIKELIST", video, userDispatch)
+                : updateLikedVideos("REMOVE_FROM_LIKELIST", video, userDispatch)
+              : navigate("/login")
           }
         ></i>
         <i
@@ -37,9 +41,15 @@ export function VideoCard({ video }) {
             isVideoInWatchLater && "selected-icon"
           }`}
           onClick={() =>
-            !isVideoInWatchLater
-              ? updateWatchLater("ADD_TO_WATCH_LATER", video, userDispatch)
-              : updateWatchLater("REMOVE_FROM_WATCH_LATER", video, userDispatch)
+            login
+              ? !isVideoInWatchLater
+                ? updateWatchLater("ADD_TO_WATCH_LATER", video, userDispatch)
+                : updateWatchLater(
+                    "REMOVE_FROM_WATCH_LATER",
+                    video,
+                    userDispatch
+                  )
+              : navigate("/login")
           }
         ></i>
       </div>

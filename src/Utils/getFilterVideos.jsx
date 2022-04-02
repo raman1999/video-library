@@ -7,7 +7,6 @@ export const getFilterVideos = (state) => {
     );
   }
   if (searchValue) {
-    console.log(searchValue);
     filterVideos = filterVideos.filter(
       (videoItem) =>
         videoItem.title.toLowerCase().includes(searchValue) ||
