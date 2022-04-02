@@ -1,6 +1,7 @@
 import { useUserContext, useAuthenticationContext } from "../../Context";
-import { updateLikedVideos, updateWatchLater } from "../../Utils";
+import { updateLikedVideos, updateWatchLater } from "../../Services";
 import { Link, useNavigate } from "react-router-dom";
+import { isItemInArray } from "../../Utils";
 
 export function VideoCard({ video }) {
   const { title, creator, _id, category } = video;
@@ -12,8 +13,8 @@ export function VideoCard({ video }) {
   } = useUserContext();
   const { login } = useAuthenticationContext();
   const navigate = useNavigate();
-  const isVideoInLikeList = likedVideos.some((vid) => vid._id === video._id);
-  const isVideoInWatchLater = watchLater.some((vid) => vid._id === video._id);
+  const isVideoInLikeList = isItemInArray(likedVideos, _id);
+  const isVideoInWatchLater = isItemInArray(watchLater, _id);
 
   return (
     <div className="card video-card txt-left">
