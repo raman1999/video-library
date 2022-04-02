@@ -1,0 +1,21 @@
+
+.sidebar{
+    padding-top: 2rem;
+    box-shadow:5px 0 5px -5px var(--txt-white) ;
+    height: calc(100vh - 2rem);
+    position: sticky;
+    top: 6%;   
+}
+.sidebar .link{
+font-size: 1.1rem;
+color:var(--txt-white);
+}
+.sidebar-icon-text{
+    padding-left: 9px;
+}
+.sidebar>.list-item{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+ 
