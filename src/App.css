@@ -33,6 +33,9 @@ body{
   text-decoration: none;
   color: unset;
 }
+input::placeholder{
+  color:var(--txt-gray);
+}
 
 /* for heading with highlighted underline */
 .title {
