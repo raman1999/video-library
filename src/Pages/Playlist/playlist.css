@@ -1,0 +1,15 @@
+
+
+.playlist-card{
+  min-height:10rem;
+  background-image:var(--bg-gradient);
+  justify-content: space-between;
+}
+.btn-create-playlist{
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+.playlist-card-link{
+flex-grow: 1;
+width: 100%;
+}
