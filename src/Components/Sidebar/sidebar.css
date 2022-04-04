@@ -9,6 +9,8 @@
 .sidebar .link{
 font-size: 1.1rem;
 color:var(--txt-white);
+width:100%;
+margin-left:0;
 }
 .sidebar-icon-text{
     padding-left: 9px;
@@ -17,5 +19,9 @@ color:var(--txt-white);
     list-style-type: none;
     padding:0;
     margin:0;
+}
+.active-link{
+    box-shadow:0 5px 1px -3px var(--white);
+    
 }
  
