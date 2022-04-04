@@ -8,6 +8,6 @@ export { NotFound } from "./NotFound/NotFound";
 export { LikedVideos } from "./LikedVideos/LikedVideos";
 export { History } from "./History/History";
 export { Playlist } from "./Playlist/Playlist";
-export { PlaylistDetails } from "./PlaylistDetails/PlaylistDetails";
+export { SinglePlaylist } from "./SinglePlaylist/SinglePlaylist";
 export { VideoDetails } from "./VideoDetails/VideoDetails";
 export { WatchLater } from "./WatchLater/WatchLater";
