@@ -8,7 +8,7 @@ import {
   History,
   NotFound,
   Playlist,
-  PlaylistDetails,
+  SinglePlaylist,
   VideoDetails,
   WatchLater,
 } from "../Pages";
@@ -26,7 +26,7 @@ export function RoutingPath() {
         <Route path="history" element={<History />} />
         <Route path="watchlater" element={<WatchLater />} />
         <Route path="playlists" element={<Playlist />} />
-        <Route path="playlists/:playlistId" element={<PlaylistDetails />} />
+        <Route path="playlists/:playlistId" element={<SinglePlaylist />} />
       </Route>
       <Route path="/videos/:videoId" element={<VideoDetails />} />
       <Route path="*" element={<NotFound />} />
