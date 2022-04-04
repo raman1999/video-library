@@ -9,7 +9,7 @@ import {
   NotFound,
   Playlist,
   SinglePlaylist,
-  VideoDetails,
+  SingleVideo,
   WatchLater,
 } from "../Pages";
 import { VideoGrid } from "../Components";
@@ -28,7 +28,7 @@ export function RoutingPath() {
         <Route path="playlists" element={<Playlist />} />
         <Route path="playlists/:playlistId" element={<SinglePlaylist />} />
       </Route>
-      <Route path="/videos/:videoId" element={<VideoDetails />} />
+      <Route path="/videos/:videoId" element={<SingleVideo />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -1,0 +1,10 @@
+.add_to_playlist_container {
+  background-color: var(--bg-color);
+  padding: 1rem;
+  min-width: 14rem;
+  min-height: 5rem;
+  position: absolute;
+  left: 80%;
+  bottom: 106%;
+  gap: 1rem;
+}

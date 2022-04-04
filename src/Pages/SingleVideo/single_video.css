@@ -1,0 +1,14 @@
+.single-video-container{
+    padding:2rem;
+   padding-left: 5rem;
+    gap:1rem;
+    margin-bottom: 10rem;;
+}
+.action-buttons-container{
+    gap:1.5rem;
+}
+.loader-container-1{
+     position: absolute;
+     top:40%;
+    right: 50%;
+}
