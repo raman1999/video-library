@@ -10,7 +10,6 @@ export function AddToPlaylistContainer({ videoDetails }) {
     userDispatch,
   } = useUserContext();
   const [showModal, setShowModal] = useState(false);
-  console.log(videoDetails);
   function isAlreadyAdded(arr, id) {
     return arr.some((item) => item._id === id);
   }

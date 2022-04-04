@@ -3,10 +3,9 @@ import { useUserContext } from "../../Context";
 import "./single_video.css";
 import { updateHistory } from "../../Services";
 import ReactPlayer from "react-player";
-import { AddToPlaylistContainer } from "../../Components";
+import { AddToPlaylistContainer, LoadingSpinner } from "../../Components";
 import { useState } from "react";
 import { UseGetAxios } from "../../Hooks/UseGetAxios";
-import { LoadingSpinner } from "../../Components";
 
 export function SingleVideo() {
   const { userDispatch } = useUserContext();
