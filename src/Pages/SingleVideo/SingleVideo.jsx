@@ -1,3 +1,3 @@
-export function VideoDetails() {
+export function SingleVideo() {
   return <div>Demo page</div>;
 }
