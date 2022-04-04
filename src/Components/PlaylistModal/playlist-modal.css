@@ -1,0 +1,22 @@
+.modal-content{
+    padding: 0.5rem;
+    justify-content: space-around;
+    background-color: var(--bg-color);
+    min-height:15rem; 
+}
+.btn-cancel{
+    position: absolute;
+    top:4%;
+    right: 1%;
+}
+
+.modal-container input{
+    background-color: var(--bg-color);
+    color:var(--txt-white);
+    width: 70%;
+    padding: 0.5rem;
+}
+.btn-add{
+    padding: 5px; 
+    width:4rem;
+}
