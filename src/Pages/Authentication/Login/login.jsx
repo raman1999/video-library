@@ -1,9 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./login.css";
 import PasswordField from "../PasswordField";
 import { useAuthenticationContext } from "../../../Context";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export function Login() {
   const initialFormData = { email: "", password: "" };
@@ -13,6 +14,20 @@ export function Login() {
   const [loginForm, setLoginForm] = useState(initialFormData);
   const [errorData, setErrorData] = useState("");
   const { email, password } = loginForm;
+  const [testUser, setTestUser] = useState(false);
+
+  useEffect(() => {
+    if (testUser) loginSubmitHandler();
+  }, [testUser, loginForm]);
+
+  function testUserHandler() {
+    setLoginForm((prev) => ({
+      ...prev,
+      email: "admin@gmail.com",
+      password: "Admin@123",
+    }));
+    setTestUser(true);
+  }
 
   function loginFormHandler(e) {
     const { name, value } = e.target;
@@ -22,7 +37,7 @@ export function Login() {
   }
 
   function loginSubmitHandler(e) {
-    e.preventDefault();
+    e?.preventDefault();
 
     (async () => {
       try {
@@ -32,6 +47,7 @@ export function Login() {
         if (encodedToken) {
           localStorage.setItem("token", encodedToken);
           setLogin(true);
+          toast.success("Logged in succesfully");
           navigate("/");
         }
       } catch (err) {
@@ -85,6 +101,13 @@ export function Login() {
         <div className="flex-column">
           <button type="submit" className="link btn bg-theme txt-gray l-sp-2">
             LOGIN
+          </button>
+          <button
+            type="button"
+            onClick={testUserHandler}
+            className="link btn bg-color shadow-white  l-sp-2"
+          >
+            Login with Test Credentials
           </button>
           <p className="login-txt">
             <span className="txt-gray">Not a user yet ? </span>
