@@ -1,34 +1,39 @@
-.bg-radient{
-    background-color:var(--bg-radient);
+.bg-radient {
+  background-color: var(--bg-radient);
 }
-.bg-theme{
-    background-color: var(--theme-color);
+.bg-theme {
+  background-color: var(--theme-color);
 }
-.bg-color{
-    background-color: var(--bg-color);
+.bg-color {
+  background-color: var(--bg-color);
 }
-.txt-theme{
-    color:var(--theme-color);
+.txt-theme {
+  color: var(--theme-color);
 }
-.txt-gray{
-    color:var(--txt-gray);
+.txt-gray {
+  color: var(--txt-gray);
 }
-.txt-white{
-    color:var(--txt-white);
-}
-.theme-shade-2{
-    color:var(--theme-shade-2);
-}
-.bg-theme-shade-2{
-    background-color: var(--theme-shade-2);
-}
-.l-height-lg{
-    line-height: 1.5;
-}
-.bd-bottom{
-    border-bottom: 2px solid var(--theme-color);
+.txt-white {
+  color: var(--txt-white);
 }
 
-.txt-normal{
-    font-weight:normal;
+.l-height-lg {
+  line-height: 1.5;
+}
+
+.txt-normal {
+  font-weight: normal;
+}
+.shadow-white {
+  box-shadow: 0 0 5px var(--txt-white);
+}
+
+.pd-sm-left {
+  padding-left: 0.8rem !important;
+}
+.mg-md-bottom {
+  margin-bottom: 1rem;
+}
+.pos-relative {
+  position: relative;
 }
