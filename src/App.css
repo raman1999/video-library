@@ -1,20 +1,21 @@
 @import url("./Utils/utilities.css");
 :root {
-  --bg-color:#2b2b31;
+  --bg-color: rgb(20, 20, 20);
   --theme-color: #ff523b;
-  --theme-shade-2: #563434;
-  --theme-shade-3: rgb(160, 69, 27);
-  --txt-gray: hsla(0,0%,100%,0.75);
+  --txt-gray: hsla(0, 0%, 100%, 0.75);
   --txt-white: #fff;
-  --border-shade: lightpink;
+  --bg-gradient: linear-gradient(rgb(10, 10, 10), grey);
 }
 
 .App {
   height: 100vh;
 }
-body{
- background-color: var(--bg-color) ;
- color:var(--txt-white);
+* {
+  color: var(--txt-white);
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-white);
 }
 .main-container {
   min-height: 80vh;
@@ -25,16 +26,34 @@ body{
   margin-bottom: 5rem;
 }
 .video-card {
-  box-shadow: 0 0 0.4rem var(--txt-gray);
+  box-shadow: 0 0 3px var(--txt-gray);
   align-items: start;
-  gap:5px;
+  gap: 5px;
 }
 .link-no-style {
   text-decoration: none;
   color: unset;
 }
-input::placeholder{
-  color:var(--txt-gray);
+input::placeholder {
+  color: var(--txt-gray);
+}
+.empty-videos {
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.selected-icon {
+  color: rgba(255, 58, 58, 0.816);
+}
+.trash-icon {
+  margin-right: 0.7rem;
+  margin-bottom: 4px;
+  font-size: 1.3rem;
+}
+.trash-container {
+  width: 100%;
 }
 
 /* for heading with highlighted underline */
@@ -64,7 +83,7 @@ input::placeholder{
 }
 
 .footer {
-  background-color: rgb(42,42,42);
+  background-color: var(--bg-color);
 }
 .btn {
   display: inline-block;
@@ -74,12 +93,10 @@ input::placeholder{
 
 /* body scrollbar */
 body::-webkit-scrollbar-thumb {
-  background-color: var(--theme-color);
-  border-radius: 12px;
+  background: linear-gradient(var(--bg-color), var(--txt-gray));
+  border-radius: 8px;
 }
-body::-webkit-scrollbar-thumb:hover {
-  background: var(--theme-shade-3);
-}
+
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
