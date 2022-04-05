@@ -20,7 +20,7 @@ export function Home() {
           <LoadingSpinner />
         </div>
       ) : (
-        <div class="my">
+        <div className="my">
           <section className="sec-introduction txt-center flex-column">
             <div className="intro-container">
               <h1 className="l-sp-2">
