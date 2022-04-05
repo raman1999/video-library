@@ -81,7 +81,9 @@ input::placeholder {
   background-color: unset;
   border: none;
 }
-
+.card-img {
+  height: 25vh;
+}
 .footer {
   background-color: var(--bg-color);
 }
