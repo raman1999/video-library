@@ -14,9 +14,13 @@ export function userReducer(state, { type, payload }) {
         ...state,
         watchLater: payload,
       };
-
-    case "SHOW_TOAST":
-      return { ...state, toastMsg: payload };
+    case "UPDATE_PLAYLIST_AFTER_VIDEO_ACTION":
+      return {
+        ...state,
+        playlists: state.playlists.map((playlist) =>
+          playlist._id === payload._id ? payload : playlist
+        ),
+      };
 
     default:
       return state;
