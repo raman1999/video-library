@@ -1,14 +1,27 @@
-.single-video-container{
-    padding:2rem;
-   padding-left: 5rem;
-    gap:1rem;
-    margin-bottom: 10rem;;
+.single-video-container {
+  padding: 2rem;
+  padding-left: 5rem;
+  gap: 1rem;
+  margin-bottom: 10rem;
 }
-.action-buttons-container{
-    gap:1.5rem;
+.single-video {
+  width: 60%;
+  height: 65vh;
 }
-.loader-container-1{
-     position: absolute;
-     top:40%;
-    right: 50%;
+.action-buttons-container {
+  gap: 1.5rem;
+}
+.loader-container-1 {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .single-video-container {
+    padding: 8px;
+  }
+  .single-video {
+    width: 100%;
+  }
 }
