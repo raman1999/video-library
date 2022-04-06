@@ -1,4 +1,18 @@
-.video-grid-container{
-    display: grid; 
+.video-grid-container {
+  display: grid;
   grid-template-columns: 18vw 1fr;
+}
+@media screen and (max-width: 768px) {
+  .video-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    bottom: 4%;
+    top: 8%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    height: 96vh;
+    background-color: var(--bg-color);
+  }
 }
