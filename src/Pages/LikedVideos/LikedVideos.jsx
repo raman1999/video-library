@@ -1,4 +1,5 @@
 import { useUserContext } from "../../Context";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 import { LikedVideoCard } from "./LikedVideoCard";
 
 export function LikedVideos() {
@@ -6,6 +7,8 @@ export function LikedVideos() {
     userState: { likedVideos },
     userDispatch,
   } = useUserContext();
+  useDocumentTitle("Liked | FitTV");
+
   return (
     <div className="liked-videos-container pos-relative">
       <h2 className="txt-center txt-white mg-md-bottom">

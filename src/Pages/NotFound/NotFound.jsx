@@ -1,6 +1,8 @@
 import "./not_found.css";
 import { Link } from "react-router-dom";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 export function NotFound() {
+  useDocumentTitle("Page Not Found| FitTV");
   return (
     <div className="page-not-found">
       <div className="page-not-found-box txt-center shadow-white">

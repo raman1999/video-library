@@ -5,7 +5,7 @@ import PasswordField from "../PasswordField";
 import { useAuthenticationContext } from "../../../Context";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import { useDocumentTitle } from "../../../Hooks/useDocumentTitle";
 export function Login() {
   const initialFormData = { email: "", password: "" };
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export function Login() {
   const [errorData, setErrorData] = useState("");
   const { email, password } = loginForm;
   const [testUser, setTestUser] = useState(false);
-
+  useDocumentTitle("Login | FitTV");
   useEffect(() => {
     if (testUser) loginSubmitHandler();
   }, [testUser, loginForm]);

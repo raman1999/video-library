@@ -1,14 +1,18 @@
-import { useUserContext } from "../../Context";
+import { useAuthenticationContext, useUserContext } from "../../Context";
 import { PlaylistCard } from "./PlaylistCard";
 import "./playlist.css";
 import { useState } from "react";
 import { PlaylistModal } from "../../Components";
+import { toast } from "react-toastify";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 
 export function Playlist() {
   const {
     userState: { playlists },
     userDispatch,
   } = useUserContext();
+  useDocumentTitle("Playlist | FitTV");
+  const { login } = useAuthenticationContext();
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -18,7 +22,9 @@ export function Playlist() {
       </h2>
       <button
         className="btn btn-create-playlist bg-color txt-white shadow-white"
-        onClick={() => setShowModal(!showModal)}
+        onClick={() =>
+          login ? setShowModal(!showModal) : toast("Please login first")
+        }
       >
         Create new playlist
       </button>
