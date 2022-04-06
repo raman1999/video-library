@@ -5,7 +5,7 @@
 
 .form-container {
   padding: 1rem 2rem;
- box-shadow: 0 0 8px var(--white);
+  box-shadow: 0 0 8px var(--white);
   justify-content: space-between;
 }
 .form-container .title {
@@ -13,7 +13,7 @@
 }
 
 .section-login .form-container {
-  height: 60vh;
+  min-height: 50vh;
 }
 .section-login .btn {
   width: 100%;
@@ -22,16 +22,15 @@
   margin: 1.3rem 0;
 }
 
-.form-container .txt-input{
+.form-container .txt-input {
   padding: 0.6rem;
   width: 20rem;
   background-color: var(--bg-color);
-  color:var(--txt-white);
+  color: var(--txt-white);
   box-shadow: 0 0 5px var(--txt-white);
-  
 }
-.txt-icon{
-  padding-top:9px;
+.txt-icon {
+  padding-top: 9px;
   font-size: 1.2rem;
   padding-right: 10px;
 }

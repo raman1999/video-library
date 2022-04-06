@@ -2,7 +2,7 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.section-register .input-container{
+.section-register .input-container {
   margin-top: 1.5rem;
 }
 /* form container */
@@ -11,10 +11,9 @@
 }
 .label {
   display: inline-block;
-  color:var(--txt-gray);
+  color: var(--txt-gray);
   width: 10rem;
   padding-top: 5px;
-  
 }
 .submit-container {
   margin-top: 2rem;
@@ -48,9 +47,29 @@
   right: 0.5rem;
   top: 0.7rem;
   font-size: 1.2rem;
-  color:gray;
+  color: gray;
 }
-.error-text{
+.error-text {
   padding-top: 4px;
-  color:rgb(235, 107, 107);
+  color: rgb(235, 107, 107);
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    padding: 1rem;
+  }
+
+  .form-container .btn {
+    margin: unset;
+    margin-top: 1rem;
+  }
+  .form-container .label {
+    display: none;
+  }
+  .submit-container {
+    padding-left: 0rem;
+  }
+  .form-container .txt-input {
+    width: 16.5rem;
+  }
 }
