@@ -7,7 +7,7 @@ const FilterContext = createContext();
 const initialArgs = {
   originalVideos: [],
   searchValue: "",
-  categoryFilter: "All",
+  categoryFilter: "All Videos",
 };
 
 export const FilterProvider = ({ children }) => {

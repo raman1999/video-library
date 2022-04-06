@@ -2,12 +2,15 @@ import { useUserContext } from "../../Context";
 import { HistoryVideoCard } from "./HistoryVideoCard";
 import "./history_videos.css";
 import { updateHistory } from "../../Services";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 
 export function History() {
   const {
     userState: { history },
     userDispatch,
   } = useUserContext();
+  useDocumentTitle("History | FitTV");
+
   return (
     <div className="history-container pos-relative">
       <h2 className="txt-center txt-white mg-md-bottom">

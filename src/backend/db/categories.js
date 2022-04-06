@@ -21,4 +21,9 @@ export const categories = [
     categoryName: "HIIT WORKOUT",
     img: "https://content.thriveglobal.com/wp-content/uploads/2018/03/Fit36_Studio_8966_28129.jpg",
   },
+  {
+    _id: uuid(),
+    categoryName: "Abs Training",
+    img: "https://www.muscleandfitness.com/wp-content/uploads/2017/07/1109-ryan-terry-weighted-crunch-abs.jpg?quality=86&strip=all",
+  },
 ];

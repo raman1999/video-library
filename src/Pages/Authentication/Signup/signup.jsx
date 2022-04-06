@@ -6,6 +6,7 @@ import ErrorText from "./ErrorText";
 import PasswordField from "../PasswordField";
 import { signupValidationHandler } from "./signupValidation";
 import { useAuthenticationContext } from "../../../Context";
+import { useDocumentTitle } from "../../../Hooks/useDocumentTitle";
 
 export function Signup() {
   const initialFormData = {
@@ -35,6 +36,7 @@ export function Signup() {
   } = errorData;
   const navigate = useNavigate();
   const { setLogin } = useAuthenticationContext();
+  useDocumentTitle("Signup | FitTV");
 
   function formHandler(e) {
     const { name, value } = e.target;

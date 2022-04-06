@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useUserContext } from "../../Context";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 import { SinglePlaylistCard } from "./SinglePlaylistCard";
 export function SinglePlaylist() {
   const {
@@ -7,11 +8,11 @@ export function SinglePlaylist() {
     userDispatch,
   } = useUserContext();
   const { playlistId } = useParams();
-
   const playlistDetails = playlists.find(
     (playlist) => playlist._id === playlistId
   );
-  const { videos } = playlistDetails;
+  const { videos, title } = playlistDetails;
+  useDocumentTitle("PlaylistDetails | FitTV");
 
   return (
     <div className="single-playlist-container pos-relative">

@@ -1,4 +1,5 @@
 import { useUserContext } from "../../Context";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 import { WatchLaterCard } from "./WatchLaterCard";
 
 export function WatchLater() {
@@ -6,7 +7,7 @@ export function WatchLater() {
     userState: { watchLater },
     userDispatch,
   } = useUserContext();
-
+  useDocumentTitle("WatchLater | FitTV");
   return (
     <div className="watch-later-container pos-relative">
       <h2 className="txt-center txt-white mg-md-bottom">
