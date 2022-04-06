@@ -1,6 +1,7 @@
 import { useNavigate, NavLink } from "react-router-dom";
 import "./navigation.css";
 import { useAuthenticationContext } from "../../Context";
+import { toast } from "react-toastify";
 
 export function Navbar() {
   const { login, setLogin } = useAuthenticationContext();
@@ -9,9 +10,14 @@ export function Navbar() {
   function logOutHandler() {
     setLogin(false);
     localStorage.clear();
-    navigate("/");
+    toast.success("Logged out successfully");
+    navigate("/login");
   }
-
+  function getActiveStyle({ isActive }) {
+    return isActive
+      ? "link nav-link txt-bold txt-theme"
+      : "link nav-link txt-white";
+  }
   return (
     <>
       <nav className="nav bg-color">
@@ -25,19 +31,19 @@ export function Navbar() {
             </span>
           </NavLink>
         </div>
-        <span id="btn-hamburger" className="nav-btn">
+        {/* <span id="btn-hamburger" className="nav-btn">
           <i className="fas fa-bars fa-lg"></i>
-        </span>
+        </span> */}
 
-        <ul id="main-list" className="nav-list nav-list-hide">
+        <ul className="nav-list">
           <li className="list-item">
             {" "}
-            <NavLink to="/" className="link txt-white">
+            <NavLink to="/" className={getActiveStyle}>
               HOME
             </NavLink>
           </li>
           <li className="list-item">
-            <NavLink to="/videos/explore" className="link txt-white">
+            <NavLink to="/videos/explore" className={getActiveStyle}>
               EXPLORE
             </NavLink>
           </li>
