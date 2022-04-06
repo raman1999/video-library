@@ -16,7 +16,7 @@ import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 
 export function SingleVideo() {
   const {
-    userState: { likedVideos, watchLater },
+    userState: { likedVideos, watchLater, history },
     userDispatch,
   } = useUserContext();
   const { login } = useAuthenticationContext();
@@ -29,6 +29,7 @@ export function SingleVideo() {
   useDocumentTitle("VideoDetails | FitTV");
   const isVideoInLikeList = isItemInArray(likedVideos, videoId);
   const isVideoInWatchLater = isItemInArray(watchLater, videoId);
+  const isVideoInHistory = isItemInArray(history, videoId);
   const [playlistToggle, setPlaylistToggle] = useState(false);
 
   function NotLoggedIn() {
@@ -53,7 +54,8 @@ export function SingleVideo() {
               height={"100%"}
               onStart={() =>
                 login
-                  ? updateHistory("ADD_TO_HISTORY", video, userDispatch)
+                  ? !isVideoInHistory &&
+                    updateHistory("ADD_TO_HISTORY", video, userDispatch)
                   : toast("Please login to enjoy our services")
               }
             />

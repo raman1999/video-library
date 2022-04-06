@@ -3,21 +3,21 @@ import { useState, useEffect } from "react";
 import "./sidebar.css";
 
 export const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   function getActiveStyle({ isActive }) {
     return isActive ? "link btn active-link" : "link btn";
   }
-  const updateFilterDisplay = () => {
+  const updateSidebarDisplay = () => {
     if (window.innerWidth >= 768) {
       setShowSidebar(true);
     }
   };
 
   useEffect(() => {
-    updateFilterDisplay();
-    window.addEventListener("resize", updateFilterDisplay);
-    return () => window.removeEventListener("resize", updateFilterDisplay);
+    updateSidebarDisplay();
+    window.addEventListener("resize", updateSidebarDisplay);
+    return () => window.removeEventListener("resize", updateSidebarDisplay);
   }, []);
   return (
     <>
