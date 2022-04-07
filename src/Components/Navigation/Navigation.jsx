@@ -37,7 +37,7 @@ export function Navbar() {
 
         <ul className="nav-list">
           <li className="list-item">
-            {" "}
+            &nbsp;
             <NavLink to="/" className={getActiveStyle}>
               HOME
             </NavLink>

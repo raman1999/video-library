@@ -7,6 +7,7 @@ import PasswordField from "../PasswordField";
 import { signupValidationHandler } from "./signupValidation";
 import { useAuthenticationContext } from "../../../Context";
 import { useDocumentTitle } from "../../../Hooks/useDocumentTitle";
+import { toast } from "react-toastify";
 
 export function Signup() {
   const initialFormData = {
@@ -81,9 +82,11 @@ export function Signup() {
             localStorage.setItem("token", encodedToken);
             setLogin(true);
             setSignupForm(initialFormData);
+            toast.success("Logged in succesfully");
             navigate("/");
           }
         } catch (err) {
+          console.log(err);
           err.response.status === 422
             ? setError("serverError", "Email already exists")
             : setError(

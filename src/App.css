@@ -106,3 +106,8 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
