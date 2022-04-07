@@ -45,7 +45,7 @@ input::placeholder {
   font-size: 1.7rem;
 }
 .selected-icon {
-  color: rgba(255, 58, 58, 0.816);
+  color: rgb(227 127 127 / 82%);
 }
 .trash-icon {
   margin-right: 0.7rem;

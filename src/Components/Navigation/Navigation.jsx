@@ -31,10 +31,6 @@ export function Navbar() {
             </span>
           </NavLink>
         </div>
-        {/* <span id="btn-hamburger" className="nav-btn">
-          <i className="fas fa-bars fa-lg"></i>
-        </span> */}
-
         <ul className="nav-list">
           <li className="list-item">
             &nbsp;

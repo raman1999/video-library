@@ -31,8 +31,7 @@
 @media screen and (max-width: 768px) {
   .nav-list-btn {
     display: block;
+    top: 3%;
+    left: 2%;
   }
-  /* .sidebar {
-    display: none;
-  } */
 }
