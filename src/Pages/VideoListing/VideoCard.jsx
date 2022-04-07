@@ -2,6 +2,7 @@ import { useUserContext, useAuthenticationContext } from "../../Context";
 import { updateLikedVideos, updateWatchLater } from "../../Services";
 import { Link, useNavigate } from "react-router-dom";
 import { isItemInArray } from "../../Utils";
+import { toast } from "react-toastify";
 
 export function VideoCard({ video }) {
   const { title, creator, _id, category } = video;
@@ -16,6 +17,10 @@ export function VideoCard({ video }) {
   const isVideoInLikeList = isItemInArray(likedVideos, _id);
   const isVideoInWatchLater = isItemInArray(watchLater, _id);
 
+  function NotLoggedIn() {
+    toast("Please Login in first");
+    navigate("/login");
+  }
   return (
     <div className="card video-card txt-left">
       <Link to={`/videos/${_id}`} className="link-no-style">
@@ -34,7 +39,7 @@ export function VideoCard({ video }) {
               ? !isVideoInLikeList
                 ? updateLikedVideos("ADD_TO_LIKELIST", video, userDispatch)
                 : updateLikedVideos("REMOVE_FROM_LIKELIST", video, userDispatch)
-              : navigate("/login")
+              : NotLoggedIn()
           }
         ></i>
         <i
@@ -50,7 +55,7 @@ export function VideoCard({ video }) {
                     video,
                     userDispatch
                   )
-              : navigate("/login")
+              : NotLoggedIn()
           }
         ></i>
       </div>

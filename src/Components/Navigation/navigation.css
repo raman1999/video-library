@@ -5,10 +5,11 @@
   border: none;
   z-index: 1;
   border-radius: unset;
+  box-shadow: 0 5px 2px 0 rgb(0 0 0 / 30%);
 }
-.nav-header{
- vertical-align: unset;
-letter-spacing: 4px;
+.nav-header {
+  vertical-align: unset;
+  letter-spacing: 4px;
 }
 .list-item {
   border: none;
@@ -16,7 +17,16 @@ letter-spacing: 4px;
 .list-item:hover {
   background-color: unset;
 }
-#main-list>.list-item > a:hover {
+.nav-link:hover {
   font-size: 1rem;
-  font-weight:bold;
+  font-weight: bold;
+  color: var(--theme-color);
+}
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none !important;
+  }
+  .nav .nav-header {
+    padding-left: 1.5rem;
+  }
 }

@@ -1,13 +1,13 @@
 .sec-introduction {
+  justify-content: space-evenly;
   box-shadow: 0 4px 4px -5px var(--txt-white);
+  padding: 3rem 1rem;
 }
-.home-image{
+.home-image {
   min-width: 50%;
-filter:drop-shadow(4px 4px 4px var(--theme-color));
+  filter: drop-shadow(4px 4px 4px var(--theme-color));
 }
-.intro-container{
-  width:50%;
-}
+
 .intro-container > a:hover {
   font-size: 1rem;
 }

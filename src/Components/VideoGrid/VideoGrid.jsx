@@ -5,7 +5,6 @@ export const VideoGrid = () => {
   return (
     <div className="video-grid-container">
       <Sidebar />
-
       <Outlet />
     </div>
   );
