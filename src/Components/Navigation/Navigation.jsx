@@ -1,13 +1,18 @@
 import { useNavigate, NavLink } from "react-router-dom";
 import "./navigation.css";
-import { useAuthenticationContext } from "../../Context";
+import { useAuthenticationContext, useUserContext } from "../../Context";
 import { toast } from "react-toastify";
 
 export function Navbar() {
   const { login, setLogin } = useAuthenticationContext();
+  const { userDispatch } = useUserContext();
   const navigate = useNavigate();
 
   function logOutHandler() {
+    userDispatch({ type: "SET_PLAYLISTS", payload: [] });
+    userDispatch({ type: "SET_LIKES", payload: [] });
+    userDispatch({ type: "SET_HISTORY", payload: [] });
+    userDispatch({ type: "SET_WATCH_LATER", payload: [] });
     setLogin(false);
     localStorage.clear();
     toast.success("Logged out successfully");
