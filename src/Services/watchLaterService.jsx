@@ -32,6 +32,6 @@ export async function updateWatchLater(type, payload, dispatch) {
         break;
     }
   } catch (err) {
-    dispatch({ type: "SHOW_TOAST", payload: "Unable to update Likelist..." });
+    toast.error("Server error! Try again later..");
   }
 }
